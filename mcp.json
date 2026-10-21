@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "boring-data-platform": {
+      "url": "https://www.boringdataplatform.com/api/mcp"
+    }
+  }
+}

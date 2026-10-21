@@ -1,0 +1,15 @@
+{
+  "name": "boring-data-platform",
+  "version": "0.1.0",
+  "description": "Research public federal procurement records with source references.",
+  "author": {
+    "name": "Parsevia LLC",
+    "email": "support@boringdataplatform.com"
+  },
+  "homepage": "https://www.boringdataplatform.com/developers",
+  "repository": "https://github.com/parsevia/boring-data-platform-cursor-plugin",
+  "license": "MIT",
+  "keywords": ["procurement", "govcon", "federal-data", "mcp"],
+  "logo": "assets/logo.svg",
+  "mcpServers": "mcp.json"
+}
