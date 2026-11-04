@@ -1,7 +1,7 @@
 # Boring Data Platform for Cursor
 
 Research public federal procurement records with source references. This plugin
-connects Cursor to the existing Boring Data Platform MCP service, operated by
+connects Cursor to the Boring Data Platform™ MCP service, operated by
 Parsevia LLC.
 
 ## What you can research
@@ -14,10 +14,11 @@ The OAuth connection exposes 39 procurement data tools:
 - SAM entity registrations, entity profiles, exclusions and integrity records.
 - GSA acquisition vehicle contracts and CALC+ labor ceiling rates.
 - DHS procurement forecasts and SBA mentor-protege agreements.
-- Dataset coverage, source dates and import information.
+- Dataset coverage and source dates.
 
 Source coverage varies. Forecasts are plans that may change or be canceled.
-Reported subawards are not a complete map of subcontracting relationships.
+Subaward data covers first-tier subawards reported from October 1, 2024, and
+does not show every subcontracting relationship.
 CALC+ rates are ceiling rates, not salaries or actual prices paid. Global
 document search is in beta. Check source references and the
 [availability notes](https://www.boringdataplatform.com/developers) before relying
@@ -28,7 +29,7 @@ on a result.
 The plugin is free to install. An active Boring Data Platform account is required
 to use the hosted service. The free plan includes 5,000 requests per month with
 no credit card. Optional paid plans provide higher request limits. MCP calls
-share the account's plan allowance with API requests. See the current
+share the account's plan allowance with API requests. See
 [pricing and limits](https://www.boringdataplatform.com/pricing).
 
 The MIT license covers the files in this repository. It does not replace the
@@ -42,7 +43,7 @@ unlimited service access.
    Customize for its MCP server. Local imports must already be permitted by your
    organization. Do not replace an existing installation without reviewing it.
 2. Use Cursor's authentication control for the Boring Data Platform server.
-   Complete Boring Data Platform sign-in and review the requested access before
+   Finish Boring Data Platform sign-in and review the requested access before
    approving it. No manually supplied API key or client secret is required.
 3. Verify a read with a small request, such as the example below. A tool appearing
    in the catalog does not by itself prove that data access works.
@@ -67,18 +68,18 @@ See [Cursor's plugin instructions](https://cursor.com/docs/plugins) and
 The MCP procurement tools are read-only. This OAuth connection cannot manage BDP
 API keys or webhooks and cannot submit bids or change government source records.
 
-The OAuth credential has a broader provider capability: Supabase also allows it
-to update your own Auth profile metadata. This is separate from the read-only
-MCP tool catalog and is disclosed on BDP's consent screen. Do not treat the
-credential as read-only across every Supabase Auth endpoint.
+The OAuth connection can also change your own sign-in details: your profile
+details and, unless you use two-step verification, your password and two-step
+settings. This is separate from the read-only MCP tools and is shown on BDP's
+consent screen. Don't treat the sign-in credential itself as read-only.
 
 Revoke the connection in Boring Data Platform Console -> Profile -> Connected
 applications.
 
 ## Example prompts
 
-- "Use list_sources to show the available procurement datasets and their stated
-  coverage and freshness. Keep unknown freshness visible."
+- "Which procurement datasets can I research here, and what dates does each one
+  cover?"
 - "Use search_opportunities with limit 1 to show one opportunity and its source
   reference. Do not make another call unless needed to explain the result."
 - "Find DHS procurement forecasts for engineering services. Explain one plan
