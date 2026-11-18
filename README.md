@@ -68,10 +68,7 @@ See [Cursor's plugin instructions](https://cursor.com/docs/plugins) and
 The MCP procurement tools are read-only. This OAuth connection cannot manage BDP
 API keys or webhooks and cannot submit bids or change government source records.
 
-The OAuth connection can also change your own sign-in details: your profile
-details and, unless you use two-step verification, your password and two-step
-settings. This is separate from the read-only MCP tools and is shown on BDP's
-consent screen. Don't treat the sign-in credential itself as read-only.
+Signing in gives read-only access to procurement data and keeps the connection signed in. It can't change your account.
 
 Revoke the connection in Boring Data Platform Console -> Profile -> Connected
 applications.
