@@ -6,14 +6,17 @@ Parsevia LLC.
 
 ## What you can research
 
-The OAuth connection exposes 39 procurement data tools:
+Use the connection to research:
 
 - SAM.gov opportunities and DLA DIBBS RFQs, with source notices and available
   solicitation documents and extracted text.
 - Federal contract awards and reported subawards.
 - SAM entity registrations, entity profiles, exclusions and integrity records.
 - GSA acquisition vehicle contracts and CALC+ labor ceiling rates.
-- DHS procurement forecasts and SBA mentor-protege agreements.
+- DHS and DOJ procurement forecasts and SBA mentor-protege agreements.
+- Federal Register notices, federal assistance listings, SBA size standards,
+  and wage determinations.
+- The DLA PUB LOG NSN catalog and DLA last-paid prices.
 - Dataset coverage and source dates.
 
 Source coverage varies. Forecasts are plans that may change or be canceled.
